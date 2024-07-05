@@ -1,0 +1,13 @@
+#root {
+  margin: 10px 0 0 0;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+@media (min-width: 30px) {
+  .text-box {
+    line-height: 1.7; /* Increase line height when font size is more than 30px */
+  }
+}
