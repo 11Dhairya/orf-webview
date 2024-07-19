@@ -1,0 +1,49 @@
+.custom-audio-player {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  position: relative;
+}
+
+.play-pause-button {
+  background: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+.play-pause-button:focus {
+  outline: none;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.progress-container {
+  flex-grow: 1;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  margin: 0 10px;
+  position: relative;
+  overflow: hidden;
+  min-width: 150px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 4px;
+  width: 0%;
+  transition: width 0.3s linear, background-color 0.3s linear;
+  min-height: 8px;
+}
+
+.time-display {
+  font-size: 14px;
+  color: #555;
+}

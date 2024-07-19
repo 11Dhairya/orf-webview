@@ -8,26 +8,31 @@ body, html {
   height: 100%;
   width: 100%;
   font-family: Arial, sans-serif;
+  background-color: white; /* Ensure the background color is white */
 }
 
-.container {
+.instructions-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Keep items at the top */
   height: 100vh;
   width: 100vw;
-  background-color: #f9f9f9;
-  padding: 20px;
+  background-color: white; /* Ensure the background color is white */
+  padding-top: 20px; /* Optional padding at the top for a slight gap */
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.title {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
   text-align: center;
-  max-width: 800px;
+}
+
+.divider {
   width: 100%;
+  border: 0.5px solid #CCC;
+  margin-bottom: 20px;
 }
 
 .illustration {
@@ -39,49 +44,34 @@ body, html {
 .illustration img {
   max-width: 100%;
   height: auto;
-  max-height: 30vh; /* Limit the height to 30% of the viewport height */
+  max-height: 40vh; /* Adjust as needed */
 }
 
 .text-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  max-width: 600px;
-  width: 100%;
+  list-style-type: none;
+  padding: 0 20px;
   margin-bottom: 20px;
-  padding: 0 10%;
-}
-
-.text-line {
-  display: flex;
-  align-items: center;
-  font-size: 1.2em;
+  text-align: left;
   color: #333;
 }
 
-.icon {
-  margin-right: 10px;
+.text-section li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 1.5em;
 }
 
-.mic-icon::before {
-  content: '🎤'; /* Unicode or your icon */
-}
-
-.wave-icon::before {
-  content: '🔊';
-}
-
-.timer-icon::before {
-  content: '⏲️';
-}
-
-.phone-icon::before {
-  content: '📱';
+.text-section li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #333;
+  font-size: 1.2em;
 }
 
 .start-button {
-  padding: 10px 20px;
+  padding: 15px 30px;
   font-size: 1.2em;
   color: #fff;
   background-color: #4CAF50;
@@ -96,30 +86,33 @@ body, html {
 
 /* Responsive Styles */
 @media (min-width: 768px) {
-  .text-section {
-    text-align: left;
-    padding: 0;
+  .title {
+    font-size: 2.5em;
   }
 
-  .text-line {
+  .text-section li {
     font-size: 1.2em;
   }
 
   .start-button {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
 }
 
 @media (max-width: 767px) {
-  .text-section {
-    padding: 0 5%;
+  .title {
+    font-size: 2em;
   }
 
-  .text-line {
+  .text-section {
+    padding: 0 10%;
+  }
+
+  .text-section li {
     font-size: 1em;
   }
 
   .start-button {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 }

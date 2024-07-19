@@ -350,13 +350,13 @@ function VachanAssessment() {
               postData={postUserData}
             />
         <div className="vachan-main-content">
-          <div className="heading">
+          <div className="heading1">
             <h1>Vachan Assessment</h1>
           </div>
           <div className="text-box" style={{ fontSize: `${fontSize}px` }}>
             <p style={{ fontSize: `${fontSize}px`, lineHeight: fontSize <= 30 ? 'inherit' : 1.5 }}>
-              {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu sollicitudin ante, sit amet consequat eros. Suspendisse facilisis orci sed augue bibendum, non vehicula nunc rhoncus. Donec sit amet nisi et eros imperdiet vehicula in a odio. Nulla ut massa turpis. Pellentesque posuere pulvinar purus ac tristique. Morbi mattis quam ut dui efficitur lacinia. Nam justo leo, sodales sed varius at, ultrices vitae quam. Suspendisse enim ante, ultrices ac faucibus vel, lobortis nec leo. Mauris laoreet dolor nec ligula malesuada, sit amet ultricies nisl scelerisque. */}
-              {assessmentTextData.text}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu sollicitudin ante, sit amet consequat eros. Suspendisse facilisis orci sed augue bibendum, non vehicula nunc rhoncus. Donec sit amet nisi et eros imperdiet vehicula in a odio. Nulla ut massa turpis. Pellentesque posuere pulvinar purus ac tristique. Morbi mattis quam ut dui efficitur lacinia. Nam justo leo, sodales sed varius at, ultrices vitae quam. Suspendisse enim ante, ultrices ac faucibus vel, lobortis nec leo. Mauris laoreet dolor nec ligula malesuada, sit amet ultricies nisl scelerisque.
+              {/* {assessmentTextData.text} */}
             </p>
           </div>
         </div>

@@ -6,13 +6,13 @@ import Recording from '../../components/Recording/Recording';
 import Loader from "react-js-loader";
 import RecordingPlaybackPopup from '../../components/RecordingPlaybackPopup/RecordingPlaybackPopup';
 import RetakeWarningPopup from '../../components/RetakeWarningPopup/RetakeWarningPopup';
-import './MicTesting.css';
+import './temp.css';
 
 
 import SubmitModal from '../../components/SubmitModal/Submit';
 import ErrorModal from "../../components/ErrorModal/ErrorModal";
 
-const MicTesting = () => {
+const VachanAssessment = () => {
   const color = "#386af6";
   const [isRecording, setIsRecording] = useState(false);
   const [isRecorded, setIsRecorded] = useState(false);
@@ -389,4 +389,4 @@ const MicTesting = () => {
   ); 
 }
 
-export default MicTesting;
+export default VachanAssessment;

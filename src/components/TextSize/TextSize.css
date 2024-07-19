@@ -1,0 +1,54 @@
+.text-size {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px 0;
+    height: 10%;
+  }
+  
+  .text-size span {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #007bff;
+  }
+  
+  .text-size button {
+    background: none;
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    line-height: 1.5;
+  }
+  
+  .text-size button:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .text-size button.active {
+    border: 2px solid #007bff; /* Highlight border for active button */
+    background-color: #e6f0ff; /* Optional: add a background color to indicate active state */
+  }
+  
+  
+  .size-14 {
+    font-size: 16px;
+  }
+  
+  .size-20 {
+    font-size: 20px;
+  }
+  
+  @media (max-width: 767px) {
+    .size-14 {
+      font-size: 14px;
+    }
+  
+    .size-20 {
+      font-size: 20px;
+    }
+  }
+  

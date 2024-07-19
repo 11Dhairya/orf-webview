@@ -1,0 +1,106 @@
+.warning-popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    background-color: #333;
+    color: white;
+  }
+  
+  .heading {
+    font-size: 20px;
+    color: white;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100vw;
+  }
+  
+  .warning-container {
+    background-color: #fff;
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 35%;
+    max-height: 250px;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: space-between;
+  }
+  
+  .warning-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .warning-icon {
+    width: 25px; /* Adjust the width as needed */
+    height: 25px; /* Adjust the height as needed */
+    margin-right: 10px;
+  }
+  
+  .warning-text {
+    height: 25px;
+    font-size: 18px;
+    color: black;
+  }
+  
+  .warning-message {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .cancel-button,
+  .confirm-button,
+  .cancel-button-1,
+  .confirm-button-1 {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cancel-button {
+    border: 2px solid black;
+    border-color: #007bff;
+    background-color: white;
+    color: #007bff;
+  }
+  
+  .confirm-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+
+  .cancel-button-1 {
+    background-color: grey;
+    color: white;
+  }
+  
+  .confirm-button-1 {
+    background-color: white;
+    border: 1px solid red;
+    color: red;
+  }
+  

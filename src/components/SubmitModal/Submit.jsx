@@ -25,7 +25,7 @@ const SubmitModal = ({ isOpen, isLoading, onRequestClose }) => {
               width="96"
               visible={true}
             />
-            <p>Please wait while we upload your audio</p>
+            {/* <p>Please wait while we upload your audio</p> */}
           </div>
           </>
         ) : (
@@ -35,7 +35,7 @@ const SubmitModal = ({ isOpen, isLoading, onRequestClose }) => {
               <path className="tick-mark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
             </svg>
             <p>Recording submitted successfully.</p>
-            <p>Your audio audition is being evaluated.</p>
+            {/* <p>Your audio audition is being evaluated.</p> */}
           </div>
         )}
       </div>
