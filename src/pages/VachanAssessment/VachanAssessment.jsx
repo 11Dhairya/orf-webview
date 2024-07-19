@@ -25,8 +25,9 @@ function VachanAssessment() {
   const audioChunks = useRef([]);
   const timerInterval = useRef(null);
 
-  const apiUrl = import.meta.env.VITE_API_BASE_URL;
-  const submitUrl = import.meta.env.VITE_API_SUBMIT_URL;
+  const botApiUrl = import.meta.env.VITE_BOT_BASE_URL;
+  const getAssessmentTextEndpoint = import.meta.env.VITE_BOT_GET_ASSESSMENT_TEXT_ENDPOINT;
+  const submitAssessmentDataEndpoint = import.meta.env.VITE_BOT_ASSESSMENT_ENDPOINT;
   const minSecondsToRecord = import.meta.env.VITE_MIN_SEC_TO_RECORD;
   const minSecTOLoadSubmittedData = import.meta.env.VITE_MIN_SEC_TO_LOAD_SUBMITTED_DATA;
   const warningTimeToRecord = import.meta.env.VITE_WARNING_TIME_TO_RECORD;
@@ -39,7 +40,7 @@ function VachanAssessment() {
   const [isLoader, setIsLoader] = useState(true);
   const [isErrorModalShow, setIsErrorModalShow] = useState(false);
   const [modalObj, setModalObj] = useState("");
-  const [assessmentText, setAssessmentText] = useState("");
+  const [assessmentTextData, setAssessmentTextData] = useState({});
 
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms * 1000));
 
@@ -47,17 +48,18 @@ function VachanAssessment() {
     let payload = null;
     const searchString = window.location.search;
     payload = searchString.split("token=")[1];
-    BotExtension.getPayload((payloadData) => {
-      payload = payloadData;
-    });
+    // BotExtension.getPayload((payloadData) => {
+    //   payload = payloadData;
+    // });
     while (payload === null) {
       await delay(0.7);
     }
-    if (payload !== null) return payload.value;
+    if (payload !== null) return payload;
   };
 
   useEffect(() => {
     const fetchData = async () => {
+      console.log(1);
       await getPayloadData();
     };
     fetchData();
@@ -66,11 +68,20 @@ function VachanAssessment() {
   const getPayloadData = async () => {
     try {
       setIsLoader(false);
-      const payloadValue = await test();
+      // const payloadValue = await test();
+      let payloadValue = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdHVkZW50X2lkIjoic3R1ZGVudF9pZF8xIiwibW9kZSI6ImFzc2Vzc21lbnQiLCJzdHVkZW50X25hbWUiOiJkaGFpcnlhIiwidGVhY2hlcl9pZCI6InRlYWNoZXJfaWRfMSIsImFwcF9sYW5ndWFnZSI6ImVuIiwiYXNzZXNzbWVudF9sYW5ndWFnZSI6ImVuIiwiZ3JhZGUiOjEsIm9yZ2FuaXNhdGlvbl9pZCI6Im9yZ19pZF8xIiwiZGV2aWNlX2lkIjoiVTJGc2RHVmtYMS91bDlCdUJDNFdsZVVmWGNiTVVYdzFKVStxV3dldFhndz0iLCJsYXQiOjEwLCJsb25nIjoxMCwic2Nob29sX2lkIjoic2Nob29sX2lkXzEiLCJvcmZfYXVkaW9fdGVzdF92YWxpZGF0aW9uX3ZhbHVlIjoxLCJkYXRlIjoiMTYtMDctMjAyNCIsImlhdCI6MTcyMTA3NzMxNH0.EJkEPtxBXEYIAohp0etgrLRX9vgC40eUDDDAqKlPXA4";
+      console.log("getPayloadData, payloadValue = ", payloadValue);
       setIsLoader(false);
       if (payloadValue !== null) {
-        await handleCreateSession(payloadValue);
-        await getAssessmentText(payloadValue);
+        // await handleCreateSession(payloadValue);
+        localStorage.setItem("Tpayload", payloadValue);
+        const textData = localStorage.getItem("TtextData");
+
+        if (!textData) 
+          await getAssessmentText(payloadValue);
+        else 
+          setAssessmentTextData(textData);
+
       } else {
         const obj = {
           message: "Session expired due to inactivity.",
@@ -91,7 +102,7 @@ function VachanAssessment() {
 
   const handleCreateSession = async (payloadValue) => {
     try {
-      const res = await axios.post(`${apiUrl}/create-session?token=${payloadValue}`, {});
+      const res = await axios.post(`${botApiUrl}/create-session?token=${payloadValue}`, {});
       localStorage.setItem("Tpayload", payloadValue);
       if (res.status === 200) {
       }
@@ -107,8 +118,22 @@ function VachanAssessment() {
 
   const getAssessmentText = async (payloadValue) => {
     try {
-      const res = await axios.post(`${apiUrl}/get-assessment-text?token=${payloadValue}`, {});
-      setAssessmentText(res.data.assessmentText);
+      const config = {
+        method: 'get',
+        url: `${botApiUrl}/${getAssessmentTextEndpoint}`,
+        params: { token: payloadValue },
+        data: null,
+        headers: { 'Content-Type': 'application/json' },
+      };
+      const response = await axios(config);
+      if (!response.data || !response.data.textData) throw new Error('Incorrect data received from orf bot, response.data = ', response.data);
+      
+      const textData = response.data.textData;
+      // textData = { textId, text, language }
+
+      localStorage.setItem("TtextData", textData);
+      setAssessmentTextData(textData);
+
     } catch (error) {
       const obj = {
         message: error.response.data.message,
@@ -200,62 +225,6 @@ function VachanAssessment() {
     }
   };
   
-
-  const convertToMP3 = async (wavBlob) => {
-    try {
-      const arrayBuffer = await wavBlob.arrayBuffer();
-      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-      const audioData = await audioContext.decodeAudioData(arrayBuffer);
-  
-      const targetSampleRate = 16000;
-      const offlineContext = new OfflineAudioContext(
-        audioData.numberOfChannels,
-        Math.ceil(audioData.duration * targetSampleRate),
-        targetSampleRate
-      );
-  
-      // Create a buffer source
-      const bufferSource = offlineContext.createBufferSource();
-      bufferSource.buffer = audioData;
-  
-      // Connect the source to the destination (resampling happens here)
-      bufferSource.connect(offlineContext.destination);
-      bufferSource.start(0);
-  
-      // Render the audio to the desired sample rate
-      const resampledAudioBuffer = await offlineContext.startRendering();
-  
-      const mp3Encoder = new lamejs.Mp3Encoder(audioData.numberOfChannels, targetSampleRate, 128);
-      const mp3Data = [];
-      let mp3buf;
-  
-      const sampleBlockSize = 1152;
-      for (let i = 0; i < resampledAudioBuffer.length; i += sampleBlockSize) {
-        const left = resampledAudioBuffer.getChannelData(0).subarray(i, i + sampleBlockSize);
-        const right = audioData.numberOfChannels > 1 ? resampledAudioBuffer.getChannelData(1).subarray(i, i + sampleBlockSize) : null;
-        
-        mp3buf = mp3Encoder.encodeBuffer(left, right);
-        if (mp3buf.length > 0) {
-          mp3Data.push(mp3buf);
-        }
-      }
-  
-      mp3buf = mp3Encoder.flush();
-      if (mp3buf.length > 0) {
-        mp3Data.push(mp3buf);
-      }
-  
-      return new Blob(mp3Data, { type: `audio/${audioFormat}` });
-    } catch (error) {
-      const obj = {
-        message: "Error conveting into mp3 format" + error,
-        okButton: "ok",
-      };
-      setModalObj(obj);
-      setIsErrorModalShow(true);
-    }
-  };  
-
   const postUserData = (type) => {
     if (type == "webView") {
       BotExtension.close();
@@ -264,14 +233,18 @@ function VachanAssessment() {
   
   const uploadFile = async (audioBlob) => {
     try {
+      const payloadValue = localStorage.getItem('Tpayload');
+
       const formData = new FormData();
-      const mp3Blob = await convertToMP3(audioBlob);
-      formData.append("file", mp3Blob, "recording.mp3");
-      
+      formData.append("file", audioBlob, "recording.mp3");
+      const textData = localStorage.getItem('textData');
+      formData.append('textData', textData);
+      localStorage.setItem("TformData", formData);
+
       const config = {
         method: 'post',
-        url: `${submitUrl}`,
-        params: {},
+        url: `${botApiUrl}/${submitAssessmentDataEndpoint}`,
+        params: { token: payloadValue },
         data: formData,
         headers: { 'Content-Type': 'multipart/form-data' },
       };
@@ -382,7 +355,8 @@ function VachanAssessment() {
           </div>
           <div className="text-box" style={{ fontSize: `${fontSize}px` }}>
             <p style={{ fontSize: `${fontSize}px`, lineHeight: fontSize <= 30 ? 'inherit' : 1.5 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu sollicitudin ante, sit amet consequat eros. Suspendisse facilisis orci sed augue bibendum, non vehicula nunc rhoncus. Donec sit amet nisi et eros imperdiet vehicula in a odio. Nulla ut massa turpis. Pellentesque posuere pulvinar purus ac tristique. Morbi mattis quam ut dui efficitur lacinia. Nam justo leo, sodales sed varius at, ultrices vitae quam. Suspendisse enim ante, ultrices ac faucibus vel, lobortis nec leo. Mauris laoreet dolor nec ligula malesuada, sit amet ultricies nisl scelerisque.
+              {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu sollicitudin ante, sit amet consequat eros. Suspendisse facilisis orci sed augue bibendum, non vehicula nunc rhoncus. Donec sit amet nisi et eros imperdiet vehicula in a odio. Nulla ut massa turpis. Pellentesque posuere pulvinar purus ac tristique. Morbi mattis quam ut dui efficitur lacinia. Nam justo leo, sodales sed varius at, ultrices vitae quam. Suspendisse enim ante, ultrices ac faucibus vel, lobortis nec leo. Mauris laoreet dolor nec ligula malesuada, sit amet ultricies nisl scelerisque. */}
+              {assessmentTextData.text}
             </p>
           </div>
         </div>
