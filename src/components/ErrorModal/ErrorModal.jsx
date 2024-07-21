@@ -3,10 +3,6 @@ import "./ErrorModal.css";
 
 function ErrorModal({ handleShowModal, isModalShow, data, postData }) {
   const ref = useRef();
-  const modal = document.querySelector("#modal");
-  // if (isModalShow) {
-  //     modal.showModal()
-  // }
 
   useEffect(() => {
     if (isModalShow) {
@@ -26,23 +22,24 @@ function ErrorModal({ handleShowModal, isModalShow, data, postData }) {
     handleShowModal(false);
     postData(data.type);
   };
+
   return (
     <>
-      <dialog ref={ref} id="modal" className="dialog">
-        <p>{data.message}</p>
-        <div className="col-md-12 mt-4 mb-4 gap-3 d-flex justify-content-center button-container">
+      <dialog ref={ref} id="error-modal" className="error-modal-dialog">
+        <p className="error-modal-message">{data.message}</p>
+        <div className="error-modal-button-container">
           {data.okButton && (
-            <button onClick={handleAction} className="diglog-submit-btn">
+            <button onClick={handleAction} className="error-modal-submit-btn">
               {data.okButton}
             </button>
           )}
           {data.yesButton && (
-            <button onClick={handleAction} className="diglog-submit-btn">
+            <button onClick={handleAction} className="error-modal-submit-btn">
               {data.yesButton}
             </button>
           )}
           {data.noButton && (
-            <button onClick={closeModal} className="dialog-close-btn">
+            <button onClick={closeModal} className="error-modal-close-btn">
               {data.noButton}
             </button>
           )}
@@ -51,4 +48,5 @@ function ErrorModal({ handleShowModal, isModalShow, data, postData }) {
     </>
   );
 }
+
 export default ErrorModal;

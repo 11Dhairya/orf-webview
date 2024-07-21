@@ -1,54 +1,67 @@
 .text-size {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 10px 0;
-    height: 10%;
-  }
-  
-  .text-size span {
-    margin-right: 10px;
-    font-size: 16px;
-    color: #007bff;
-  }
-  
-  .text-size button {
-    background: none;
-    border: 1px solid #007bff;
-    color: #007bff;
-    padding: 5px 10px;
-    margin: 0 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    line-height: 1.5;
-  }
-  
-  .text-size button:hover {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .text-size button.active {
-    border: 2px solid #007bff; /* Highlight border for active button */
-    background-color: #e6f0ff; /* Optional: add a background color to indicate active state */
-  }
-  
-  
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: calc(1vh + 1vw) 0;
+  height: 10%;
+}
+
+.text-size span {
+  margin-right: calc(0.5vh + 0.5vw);
+  font-size: calc(1vh + 1vw);
+  color: #84A2F4;
+}
+
+.text-size button {
+  background: none;
+  border: calc(0.1vh + 0.1vw) solid #007bff;
+  color: #386AF6;
+  padding: calc(0.3vh + 0.3vw) calc(0.8vh + 0.8vw);
+  margin: 0 calc(0.5vh + 0.5vw);
+  cursor: pointer;
+  border-radius: calc(0.3vh + 0.3vw);
+  line-height: 1.5;
+  font-size: calc(0.8vh + 0.8vw);
+}
+
+.text-size button.active {
+  border: calc(0.2vh + 0.2vw) solid #386AF6;
+  background-color: #e6f0ff;
+}
+
+.size-14 {
+  font-size: calc(1.2vh + 1.2vw);
+}
+
+.size-20 {
+  font-size: calc(1.6vh + 1.6vw);
+}
+
+@media (max-width: 767px) {
   .size-14 {
-    font-size: 16px;
+    font-size: calc(1.4vh + 1.4vw);
   }
-  
+
   .size-20 {
-    font-size: 20px;
+    font-size: calc(1.8vh + 1.8vw);
   }
-  
-  @media (max-width: 767px) {
-    .size-14 {
-      font-size: 14px;
-    }
-  
-    .size-20 {
-      font-size: 20px;
-    }
+}
+
+@media (min-width: 1024px) {
+  .text-size span {
+    font-size: calc(1vh + 1vw);
   }
-  
+
+  .text-size button {
+    padding: calc(0.2vh + 0.2vw) calc(0.5vh + 0.5vw);
+    font-size: calc(0.6vh + 0.6vw);
+  }
+
+  .size-14 {
+    font-size: calc(1vh + 1vw);
+  }
+
+  .size-20 {
+    font-size: calc(1.4vh + 1.4vw);
+  }
+}

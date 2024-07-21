@@ -1,56 +1,64 @@
-.header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 15%;
-    max-height: 100px;
-    color: black;
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.header-title {
+  padding: 1%;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  font-size: calc(1.5rem + 1vw);
+  text-align: center;
+  color: black;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1%;
+  width: 100%;
+}
+
+.header-speak-container {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding-left: 1%;
+}
+
+.header-voice-icon {
+  margin-right: 1%;
+  width: calc(1.5rem + 1vw);
+  height: calc(1.5rem + 1vw);
+}
+
+.header-speak-text {
+  font-size: calc(1rem + 0.5vw);
+  color: #999999;
+}
+
+.header-instructions {
+  padding-right: 1%;
+  font-size: calc(1rem + 0.5vw);
+  color: #386AF6;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .header-title {
+    font-size: calc(1.5rem + 2vw);
   }
-  
-  .heading {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    width: 100%;
-    color: black;
+
+  .header-voice-icon {
+    width: calc(2rem + 1vw);
+    height: calc(2rem + 1vw);
   }
-  
-  .header h1 {
-    margin: 0;
-    font-size: 24px;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
-    color: black;
+
+  .header-speak-text,
+  .header-instructions {
+    font-size: calc(1rem + 1vw);
   }
-  
-  .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 100%;
-  }
-  
-  .speak-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .voice-icon {
-    margin-right: 10px;
-    width: 20px; 
-    height: 20px; 
-  }
-  
-  .header-content span {
-    margin-right: 10px;
-    font-size: 16px;
-    color: grey;
-  }
-  
-  .header-content a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
+}

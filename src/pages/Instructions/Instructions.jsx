@@ -11,19 +11,19 @@ const Instructions = () => {
   };
 
   return (
-    <div className="instructions-container">
-      <h1 className="title">ORF Assessment</h1>
-      <hr className="divider" />
-      <div className="illustration">
+    <div className="instruction-wrapper">
+      <h1 className="instruction-title">ORF Assessment</h1>
+      <hr className="instruction-divider" />
+      <div className="instruction-image-container">
         <img src={imagepath} alt="Illustration" />
       </div>
-      <ul className="text-section">
+      <ul className="instruction-text-list">
         <li>Make sure your microphone is working properly</li>
         <li>Try to avoid background noise while recording</li>
         <li>Keep the recording lighter than 5 seconds</li>
         <li>Keep the phone near the balcony for better reception</li>
       </ul>
-      <button className="start-button" onClick={handleStartClick}>
+      <button className="instruction-start-button" onClick={handleStartClick}>
         Start
       </button>
     </div>
