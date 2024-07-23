@@ -9,7 +9,7 @@ const RetakeWarningPopup = ({
     onCancelDeleteRecording,
     onDeleteRecording
   }) => (
-    <div>
+    <div className= "retakepopup-container">
       {!showDeletePopup ? (
         <div className="retakepopup-warning-popup">
           <div className="retakepopup-heading">ORF Assessment</div>
@@ -54,7 +54,7 @@ const RetakeWarningPopup = ({
                   Delete
                 </button>
               </div>
-            </div>
+            </div> 
           </div>
         </div>
       )}

@@ -67,7 +67,7 @@ const CustomAudioPlayer = ({ src, timer }) => {
       <div className="progress-container">
         <div className="progress-bar" style={{ width: `${(currentTime / duration) * 100}%` }}></div>
       </div>
-      <div className="time-display">{formatTime(currentTime)} / {formatTime(duration)}</div>
+      <div className="time-display">{formatTime(currentTime)}</div>
       <audio ref={audioRef} src={src} />
     </div>
   );

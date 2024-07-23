@@ -19,42 +19,89 @@
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .progress-container {
   flex-grow: 1;
-  height: 8px;
+  height: 0.3rem;
   background-color: #e0e0e0;
-  border-radius: 4px;
-  margin: 0 10px;
+  border-radius: 1rem;
+  margin: 0 0.5rem;
   position: relative;
   overflow: hidden;
-  min-width: 150px;
+  min-width: 6rem;
 }
 
 .progress-bar {
   height: 100%;
   background-color: #007bff;
-  border-radius: 4px;
+  border-radius: 1rem;
   width: 0%;
   transition: width 0.3s linear, background-color 0.3s linear;
-  min-height: 8px;
 }
 
 .time-display {
-  font-size: 14px;
+  font-size: 1rem;
   color: #555;
 }
 
 @media (max-width: 767px) {
   .icon {
-    width: 60px;
-    height: 60px;
+    width: 1.6rem;
+    height: 1.6rem;
   }
 
   .time-display {
-    font-size: 18px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .progress-container {
+    height: 0.4rem;
+    margin: 0 0.7rem;
+  }
+
+  .time-display {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .icon {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .progress-container {
+    height: 0.4rem;
+    margin: 0 1rem;
+  }
+
+  .time-display {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1201px) {
+  .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .progress-container {
+    height: 0.5rem;
+    margin: 0 1rem;
+  }
+
+  .time-display {
+    font-size: 1.4rem;
   }
 }
