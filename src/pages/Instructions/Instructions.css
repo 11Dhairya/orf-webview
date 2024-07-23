@@ -19,8 +19,8 @@ body, html {
   height: 100%;
   width: 100%;
   background-color: white;
-  padding-top: 2vh;
-  padding-bottom: 10vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
 .instruction-title {

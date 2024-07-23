@@ -5,6 +5,10 @@ const TextSize = ({ setTextSize }) => {
   const [activeSize, setActiveSize] = useState('14px');
 
   const handleSizeChange = (size) => {
+    const width = window.innerWidth;
+    if (size === '16px' || size === '20px') {
+      size = width < 1024 ? '16px' : '20px';
+    }
     setTextSize(size);
     setActiveSize(size);
   };
@@ -19,8 +23,8 @@ const TextSize = ({ setTextSize }) => {
         A
       </button>
       <button
-        className={`size-20 ${activeSize === '20px' ? 'active' : ''}`}
-        onClick={() => handleSizeChange('20px')}
+        className={`size-16-20 ${activeSize === '16px' || activeSize === '20px' ? 'active' : ''}`}
+        onClick={() => handleSizeChange('16px')} 
       >
         A
       </button>

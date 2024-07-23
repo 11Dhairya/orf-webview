@@ -76,7 +76,6 @@
   width: 100%;
 }
 
-.recordingPlaybackcomponent-save-button,
 .recordingPlaybackcomponent-retake-button {
   padding: 1rem 2rem;
   font-size: 1.5rem;
@@ -93,15 +92,22 @@
   color: #386AF6;
 }
 
-.recordingPlaybackcomponent-save-button:hover,
-.recordingPlaybackcomponent-retake-button:hover {
+.recordingPlaybackcomponent-save-button {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border: none;
+  width: 8rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 0.1rem solid #386AF6;
   background-color: #386AF6;
-  color: #fff;
+  color: white;
 }
 
-/* Updated Media Queries */
-
-/* For max-width: 767px, decrease the size of images */
 @media (max-width: 767px) {
   .recordingPlaybackcomponent-recording-popup {
     justify-content: space-around;

@@ -2,66 +2,92 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: calc(1vh + 1vw) 0;
-  height: 10%;
+  margin: 1rem 0;
 }
 
 .text-size span {
-  margin-right: calc(0.5vh + 0.5vw);
-  font-size: calc(1vh + 1vw);
+  margin-right: 0.5rem;
+  font-size: 1rem;
   color: #84A2F4;
 }
 
 .text-size button {
   background: none;
-  border: calc(0.1vh + 0.1vw) solid #007bff;
+  border: 1px solid #007bff;
   color: #386AF6;
-  padding: calc(0.3vh + 0.3vw) calc(0.8vh + 0.8vw);
-  margin: 0 calc(0.5vh + 0.5vw);
+  padding: 0.3rem 0.8rem;
+  margin: 0 0.5rem;
   cursor: pointer;
-  border-radius: calc(0.3vh + 0.3vw);
-  line-height: 1.5;
-  font-size: calc(0.8vh + 0.8vw);
+  border-radius: 0.3rem;
+  font-size: 1rem;
 }
 
 .text-size button.active {
-  border: calc(0.2vh + 0.2vw) solid #386AF6;
+  border: 2px solid #386AF6;
   background-color: #e6f0ff;
 }
 
 .size-14 {
-  font-size: calc(1.2vh + 1.2vw);
+  font-size: 1rem; /* 14px */
 }
 
-.size-20 {
-  font-size: calc(1.6vh + 1.6vw);
+.size-16-20 {
+  font-size: 1.25rem; /* 16px or 20px based on width */
 }
 
 @media (max-width: 767px) {
-  .size-14 {
-    font-size: calc(1.4vh + 1.4vw);
-  }
-
-  .size-20 {
-    font-size: calc(1.8vh + 1.8vw);
-  }
-}
-
-@media (min-width: 1024px) {
   .text-size span {
-    font-size: calc(1vh + 1vw);
+    font-size: 0.9rem;
   }
 
   .text-size button {
-    padding: calc(0.2vh + 0.2vw) calc(0.5vh + 0.5vw);
-    font-size: calc(0.6vh + 0.6vw);
+    padding: 0.2rem 0.6rem;
+    font-size: 0.9rem;
   }
 
   .size-14 {
-    font-size: calc(1vh + 1vw);
+    font-size: 0.875rem; /* 14px */
   }
 
-  .size-20 {
-    font-size: calc(1.4vh + 1.4vw);
+  .size-16-20 {
+    font-size: 1rem; /* 16px */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .text-size span {
+    font-size: 1rem;
+  }
+
+  .text-size button {
+    padding: 0.3rem 0.8rem;
+    font-size: 1rem;
+  }
+
+  .size-14 {
+    font-size: 1rem; /* 14px */
+  }
+
+  .size-16-20 {
+    font-size: 1.25rem; /* 16px */
+  }
+}
+
+@media (min-width: 1025px) {
+  .text-size span {
+    font-size: 1.2rem;
+  }
+
+  .text-size button {
+    padding: 0.4rem 1rem;
+    font-size: 1.2rem;
+  }
+
+  .size-14 {
+    font-size: 1.25rem; /* 14px */
+  }
+
+  .size-16-20 {
+    font-size: 1.5rem; /* 20px */
   }
 }

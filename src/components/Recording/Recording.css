@@ -1,80 +1,219 @@
+/* Recording.css */
 .recording-container {
-    background-color: #ECECEC;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* height: 30%; */
-    max-height: 250px;
-  }
-  
-  .recording-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 90%;
-  }
-  
-  .recording-modal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
+  background-color: #ECECEC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.recording-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.recording-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.recording-status {
+  font-size: 1.2rem;
+  color: #1C1B34;
+  margin-bottom: 0.8rem;
+}
+
+.recording-timer-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.recording-dot {
+  width: 2rem;
+  height: 2rem;
+  background: #EB5757;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.recording-timer-container span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: grey;
+}
+
+.recording-stop-button,
+.recording-start-button {
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.recording-stop-button {
+  background: none;
+  color: #386AF6;
+  border: 0.1rem solid #386AF6;
+}
+
+.recording-stop-button:hover {
+  background-color: #386AF6;
+  color: #fff;
+}
+
+.recording-start-button {
+  background-color: #386AF6;
+  color: white;
+  border: none;
+}
+
+
+
+.recording-stop-text,
+.recording-start-text {
+  font-size: 1.5rem;
+  color: #84A2F4;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
   .recording-status {
-    font-size: calc(1rem + 0.5vw + 0.2vh);
-    color: #1C1B34;
-    margin-bottom: calc(0.5rem + 0.5vw + 0.2vh);
+    font-size: 1.3rem;
   }
-  
+
   .recording-timer-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: calc(0.5rem + 0.5vw + 0.2vh);
+    margin-bottom: 1rem;
   }
-  
+
   .recording-dot {
-    width: calc(0.8rem + 0.5vw + 0.2vh);
-    height: calc(0.8rem + 0.5vw + 0.2vh);
-    background: red;
-    border-radius: 50%;
-    margin-right: calc(0.8rem + 0.5vw + 0.2vh);
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 1rem;
   }
-  
+
   .recording-timer-container span {
-    font-size: calc(1rem + 0.5vw + 0.2vh);
-    font-weight: bold;
-    color: grey;
+    font-size: 1.3rem;
   }
-  
+
   .recording-stop-button,
   .recording-start-button {
-    padding: calc(0.3rem + 0.5vw + 0.2vh) calc(0.8rem + 0.5vw + 0.2vh);
-    margin-bottom: calc(0.5rem + 0.5vw + 0.2vh);
-    cursor: pointer;
-    background: none;
-    color: #386AF6;
-    border: 1px solid #386AF6;
-    border-radius: calc(0.3rem + 0.5vw + 0.2vh);
-    font-size: calc(0.9rem + 0.5vw + 0.2vh);
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    width: 10rem;
   }
-  
-  .recording-stop-button:hover,
-  .recording-start-button:hover {
-    background-color: #386AF6;
-    color: #fff;
-  }
-  
+
   .recording-stop-text,
   .recording-start-text {
-    font-size: calc(0.9rem + 0.5vw + 0.2vh);
-    color: #84A2F4;
+    font-size: 1.3rem;
   }
-  
-  .hidden {
-    visibility: hidden;
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .recording-status {
+    font-size: 1.5rem;
   }
-  
+
+  .recording-timer-container {
+    margin-bottom: 1.2rem;
+  }
+
+  .recording-dot {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  .recording-timer-container span {
+    font-size: 1.5rem;
+  }
+
+  .recording-stop-button,
+  .recording-start-button {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.5rem;
+    width: 11rem;
+  }
+
+  .recording-stop-text,
+  .recording-start-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1201px) {
+  .recording-status {
+    font-size: 1.7rem;
+  }
+
+  .recording-timer-container {
+    margin-bottom: 1.4rem;
+  }
+
+  .recording-dot {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 1.5rem;
+  }
+
+  .recording-timer-container span {
+    font-size: 1.7rem;
+  }
+
+  .recording-stop-button,
+  .recording-start-button {
+    padding: 1.5rem 3rem;
+    font-size: 1.7rem;
+    width: 12rem;
+  }
+
+  .recording-stop-text,
+  .recording-start-text {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .recording-status {
+    font-size: 1rem;
+  }
+
+  .recording-timer-container {
+    margin-bottom: 0.6rem;
+  }
+
+  .recording-dot {
+    width: 0.9rem;
+    height: 0.9rem;
+    margin-right: 0.8rem;
+  }
+
+  .recording-timer-container span {
+    font-size: 1rem;
+  }
+
+  .recording-stop-button,
+  .recording-start-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    width: 8rem;
+  }
+
+  .recording-stop-text,
+  .recording-start-text {
+    font-size: 1rem;
+  }
+}
