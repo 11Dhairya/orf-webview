@@ -1,5 +1,6 @@
 .error-modal-dialog {
     max-width: 20rem;
+    padding: 1rem;
     border: 0;
     border-radius: 0.5rem;
     box-shadow: hsl(0 0% 0% / 10%) 0 0 0.5rem 0.25rem;

@@ -20,7 +20,7 @@ body, html {
   width: 100%;
   background-color: white;
   padding-top: 1vh;
-  padding-bottom: 1vh;
+  padding-bottom: 1rem;
 }
 
 .instruction-title {
@@ -70,22 +70,18 @@ body, html {
 
 .instruction-start-button {
   display: flex;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border: none;
+  width: 8rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5vh 4vw;
-  font-size: 1.6rem;
-  min-width: 10vw;
-  min-height: 5vh;
-  max-height: 8vh;
-  color: #F4F6FA;
-  background-color: #386AF6;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
   text-align: center;
-  margin-bottom: 6vh;
-  padding-bottom: 1vh;
-  line-height: 1.5;
+  color: white;
+  background-color: #386AF6;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -113,12 +109,9 @@ body, html {
   }
 
   .instruction-start-button {
-    font-size: 1.5rem;
-    padding: 2vh 5vw;
-    min-width: 12vw;
-    min-height: 6vh;
-    max-height: 8vh;
-    margin-bottom: 6vh;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    width: 10rem;
   }
 }
 
@@ -128,7 +121,7 @@ body, html {
   }
 
   .instruction-image-container {
-    width: 55%;
+    width: 50%;
   }
 
   .instruction-image-container img {
@@ -143,16 +136,13 @@ body, html {
   }
 
   .instruction-text-list li {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   .instruction-start-button {
-    font-size: 2rem;
-    padding: 2.5vh 6vw;
-    min-width: 14vw;
-    min-height: 7vh;
-    max-height: 9vh;
-    margin-bottom: 6vh;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.5rem;
+    width: 11rem;
   }
 }
 
@@ -181,12 +171,9 @@ body, html {
   }
 
   .instruction-start-button {
-    font-size: 2.1rem;
-    padding: 3vh 7vw;
-    min-width: 16vw;
-    min-height: 8vh;
-    max-height: 10vh;
-    margin-bottom: 8vh;
+    padding: 1.5rem 3rem;
+    font-size: 1.7rem;
+    width: 12rem;
   }
 }
 
@@ -220,11 +207,8 @@ body, html {
   }
 
   .instruction-start-button {
+    padding: 0.8rem 1.5rem;
     font-size: 1rem;
-    padding: 1.5vh 4vw;
-    min-width: 10vw;
-    min-height: 5vh;
-    max-height: 6vh;
-    margin-bottom: 6vh;
+    width: 8rem;
   }
 }
