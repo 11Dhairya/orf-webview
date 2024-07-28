@@ -139,7 +139,7 @@ body, html {
   }
 
   .retakepopup-warning-message {
-    font-size: 1.3rem; /* Decreased font size */
+    font-size: 1.2rem;
   }
 
   .retakepopup-cancel-button,
@@ -154,35 +154,35 @@ body, html {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .retakepopup-heading {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
 
   .retakepopup-warning-icon {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 1.9rem;
+    height: 1.9rem;
   }
 
   .retakepopup-warning-text {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .retakepopup-warning-message {
-    font-size: 1.5rem; /* Decreased font size */
+    font-size: 1.3rem;
   }
 
   .retakepopup-cancel-button,
   .retakepopup-confirm-button,
   .retakepopup-cancel-button-1,
   .retakepopup-confirm-button-1 {
-    padding: 1rem 2rem;
-    font-size: 1.3rem;
-    width: 10rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    width: 8rem;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1200px) {
   .retakepopup-heading {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 
   .retakepopup-warning-icon {
@@ -191,47 +191,47 @@ body, html {
   }
 
   .retakepopup-warning-text {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
   }
 
   .retakepopup-warning-message {
-    font-size: 1.8rem; /* Decreased font size */
+    font-size: 1.4rem; 
   }
 
   .retakepopup-cancel-button,
   .retakepopup-confirm-button,
   .retakepopup-cancel-button-1,
   .retakepopup-confirm-button-1 {
-    padding: 1.2rem 2.5rem;
-    font-size: 1.5rem;
-    width: 11rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    width: 8rem;
   }
 }
 
 @media (min-width: 1201px) {
   .retakepopup-heading {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
   }
 
   .retakepopup-warning-icon {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2.1rem;
+    height: 2.1rem;
   }
 
   .retakepopup-warning-text {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .retakepopup-warning-message {
-    font-size: 2rem; /* Decreased font size */
+    font-size: 1.5rem; 
   }
 
   .retakepopup-cancel-button,
   .retakepopup-confirm-button,
   .retakepopup-cancel-button-1,
   .retakepopup-confirm-button-1 {
-    padding: 1.5rem 3rem;
-    font-size: 1.7rem;
-    width: 12rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    width: 8rem;
   }
 }

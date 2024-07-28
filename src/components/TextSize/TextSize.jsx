@@ -17,12 +17,14 @@ const TextSize = ({ setTextSize }) => {
     <div className="text-size">
       <span>Text Size</span>
       <button
+        id="small-button"
         className={`size-14 ${activeSize === '14px' ? 'active' : ''}`}
         onClick={() => handleSizeChange('14px')}
       >
         A
       </button>
       <button
+        id="large-button"
         className={`size-16-20 ${activeSize === '16px' || activeSize === '20px' ? 'active' : ''}`}
         onClick={() => handleSizeChange('16px')} 
       >

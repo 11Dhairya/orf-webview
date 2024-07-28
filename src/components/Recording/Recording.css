@@ -63,6 +63,7 @@
 
 .recording-stop-button {
   background: none;
+  font-weight: 500;
   color: #386AF6;
   border: 0.1rem solid #386AF6;
 }
@@ -88,102 +89,6 @@
 
 .hidden {
   visibility: hidden;
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .recording-status {
-    font-size: 1.3rem;
-  }
-
-  .recording-timer-container {
-    margin-bottom: 1rem;
-  }
-
-  .recording-dot {
-    width: 1.2rem;
-    height: 1.2rem;
-    margin-right: 1rem;
-  }
-
-  .recording-timer-container span {
-    font-size: 1.3rem;
-  }
-
-  .recording-stop-button,
-  .recording-start-button {
-    padding: 1rem 2rem;
-    font-size: 1.3rem;
-    width: 10rem;
-  }
-
-  .recording-stop-text,
-  .recording-start-text {
-    font-size: 1.3rem;
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1200px) {
-  .recording-status {
-    font-size: 1.5rem;
-  }
-
-  .recording-timer-container {
-    margin-bottom: 1.2rem;
-  }
-
-  .recording-dot {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-right: 1rem;
-  }
-
-  .recording-timer-container span {
-    font-size: 1.5rem;
-  }
-
-  .recording-stop-button,
-  .recording-start-button {
-    padding: 1.2rem 2.5rem;
-    font-size: 1.5rem;
-    width: 11rem;
-  }
-
-  .recording-stop-text,
-  .recording-start-text {
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 1201px) {
-  .recording-status {
-    font-size: 1.7rem;
-  }
-
-  .recording-timer-container {
-    margin-bottom: 1.4rem;
-  }
-
-  .recording-dot {
-    width: 1.8rem;
-    height: 1.8rem;
-    margin-right: 1.5rem;
-  }
-
-  .recording-timer-container span {
-    font-size: 1.7rem;
-  }
-
-  .recording-stop-button,
-  .recording-start-button {
-    padding: 1.5rem 3rem;
-    font-size: 1.7rem;
-    width: 12rem;
-  }
-
-  .recording-stop-text,
-  .recording-start-text {
-    font-size: 1.7rem;
-  }
 }
 
 @media (max-width: 767px) {
@@ -217,3 +122,112 @@
     font-size: 1rem;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .recording-status {
+    font-size: 1.1rem;
+  }
+
+  .recording-content {
+    padding: 1.3rem;
+  }
+
+  .recording-timer-container {
+    margin-bottom: 0.8rem;
+  }
+
+  .recording-dot {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.9rem;
+  }
+
+  .recording-timer-container span {
+    font-size: 1.1rem;
+  }
+
+  .recording-stop-button,
+  .recording-start-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    width: 8rem;
+  }
+
+  .recording-stop-text,
+  .recording-start-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .recording-status {
+    font-size: 1.1rem;
+  }
+
+  .recording-content {
+    padding: 1.5rem;
+  }
+
+  .recording-timer-container {
+    margin-bottom: 0.9rem;
+  }
+
+  .recording-dot {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.9rem;
+  }
+
+  .recording-timer-container span {
+    font-size: 1.1rem;
+  }
+
+  .recording-stop-button,
+  .recording-start-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    width: 8rem;
+  }
+
+  .recording-stop-text,
+  .recording-start-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1201px) {
+  .recording-status {
+    font-size: 1.2rem;
+  }
+
+  .recording-content {
+    padding: 1.8rem;
+  }
+
+  .recording-timer-container {
+    margin-bottom: 1rem;
+  }
+
+  .recording-dot {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 1rem;
+  }
+
+  .recording-timer-container span {
+    font-size: 1.2rem;
+  }
+
+  .recording-stop-button,
+  .recording-start-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    width: 8rem;
+  }
+
+  .recording-stop-text,
+  .recording-start-text {
+    font-size: 1.2rem;
+  }
+}
+

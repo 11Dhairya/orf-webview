@@ -53,60 +53,88 @@
   }
 
   .header-voice-icon {
+    margin-right: 0.6rem;
     width: 1.6rem;
     height: 1.6rem;
   }
 
   .header-speak-text,
   .header-instructions {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .header-title {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
+  }
+
+  .header-speak-container {
+    padding-left: 2rem;
+  }
+
+  .header-instructions {
+    padding-right: 2rem;
   }
 
   .header-voice-icon {
-    width: 2rem;
-    height: 2rem;
+    margin-right: 0.8rem;
+    width: 1.7rem;
+    height: 1.7rem;
   }
 
   .header-speak-text,
   .header-instructions {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1200px) {
   .header-title {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 
   .header-voice-icon {
-    width: 2.2rem;
-    height: 2.2rem;
+    margin-right: 0.7rem;
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .header-speak-container {
+    padding-left: 2.5rem;
+  }
+
+  .header-instructions {
+    padding-right: 2.5rem;
   }
 
   .header-speak-text,
   .header-instructions {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
 }
 
 @media (min-width: 1201px) {
   .header-title {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
+  }
+
+  .header-speak-container {
+    padding-left: 3.5rem;
+  }
+
+  .header-instructions {
+    padding-right: 3.5rem;
   }
 
   .header-voice-icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    margin-right: 0.6rem;
+    width: 1.9rem;
+    height: 1.9rem;
   }
 
   .header-speak-text,
   .header-instructions {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
   }
 }

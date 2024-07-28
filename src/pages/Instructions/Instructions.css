@@ -84,99 +84,6 @@ body, html {
   background-color: #386AF6;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  .instruction-title {
-    font-size: 2.2rem;
-  }
-
-  .instruction-image-container {
-    width: 65%;
-  }
-
-  .instruction-image-container img {
-    max-width: 100%;
-    height: auto;
-    max-height: 45vh;
-  }
-
-  .instruction-text-list {
-    padding: 0 10vw;
-    margin-bottom: 6vh;
-  }
-
-  .instruction-text-list li {
-    font-size: 1.6rem;
-  }
-
-  .instruction-start-button {
-    padding: 1rem 2rem;
-    font-size: 1.3rem;
-    width: 10rem;
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1200px) {
-  .instruction-title {
-    font-size: 2.5rem;
-  }
-
-  .instruction-image-container {
-    width: 50%;
-  }
-
-  .instruction-image-container img {
-    max-width: 100%;
-    height: auto;
-    max-height: 45vh;
-  }
-
-  .instruction-text-list {
-    padding: 0 12vw;
-    margin-bottom: 7vh;
-  }
-
-  .instruction-text-list li {
-    font-size: 1.7rem;
-  }
-
-  .instruction-start-button {
-    padding: 1.2rem 2.5rem;
-    font-size: 1.5rem;
-    width: 11rem;
-  }
-}
-
-@media (min-width: 1201px) {
-  .instruction-title {
-    font-size: 2.7rem;
-  }
-
-  .instruction-image-container {
-    width: 45%;
-  }
-
-  .instruction-image-container img {
-    max-width: 100%;
-    height: auto;
-    max-height: 45vh;
-  }
-
-  .instruction-text-list {
-    padding: 0 15vw;
-    margin-bottom: 8vh;
-  }
-
-  .instruction-text-list li {
-    font-size: 1.7rem;
-  }
-
-  .instruction-start-button {
-    padding: 1.5rem 3rem;
-    font-size: 1.7rem;
-    width: 12rem;
-  }
-}
-
 @media (max-width: 767px) {
   .instruction-title {
     font-size: 1.8rem;
@@ -212,3 +119,97 @@ body, html {
     width: 8rem;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .instruction-title {
+    font-size: 2.1rem;
+  }
+
+  .instruction-image-container {
+    width: 65%;
+  }
+
+  .instruction-image-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 45vh;
+  }
+
+  .instruction-text-list {
+    padding: 0 7vw;
+    margin-bottom: 6vh;
+  }
+
+  .instruction-text-list li {
+    font-size: 1.2rem;
+  }
+
+  .instruction-start-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    width: 8rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .instruction-title {
+    font-size: 2.3rem;
+  }
+
+  .instruction-image-container {
+    width: 50%;
+  }
+
+  .instruction-image-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 45vh;
+  }
+
+  .instruction-text-list {
+    padding: 0 8vw;
+    margin-bottom: 6vh;
+  }
+
+  .instruction-text-list li {
+    font-size: 1.3rem;
+  }
+
+  .instruction-start-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    width: 8rem;
+  }
+}
+
+@media (min-width: 1201px) {
+  .instruction-title {
+    font-size: 2.5rem;
+  }
+
+  .instruction-image-container {
+    width: 45%;
+  }
+
+  .instruction-image-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 45vh;
+  }
+
+  .instruction-text-list {
+    padding: 0 8vw;
+    margin-bottom: 7vh;
+  }
+
+  .instruction-text-list li {
+    font-size: 1.4rem;
+  }
+
+  .instruction-start-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    width: 8rem;
+  }
+}
+

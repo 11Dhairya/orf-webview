@@ -12,7 +12,7 @@ const Instructions = () => {
 
   return (
     <div className="instruction-wrapper">
-      <h1 className="instruction-title">ORF Assessment</h1>
+      <div className="instruction-title">ORF Assessment</div>
       <hr className="instruction-divider" />
       <div className="instruction-image-container">
         <img src={imagepath} alt="Illustration" />

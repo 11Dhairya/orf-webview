@@ -4,7 +4,7 @@ import speakingIcon from '../../assets/speaking.png';
 
 const Header = () => (
   <div className="header-container">
-    <h1 className="header-title">ORF Assessment</h1>
+    <div className="header-title">ORF Assessment</div>
     <div className="header-content">
       <div className="header-speak-container">
         <img src={speakingIcon} alt="Speak the Following" className="header-voice-icon" />

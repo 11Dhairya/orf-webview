@@ -3,6 +3,7 @@
   justify-content: flex-end;
   align-items: center;
   margin: 1rem 0;
+  padding-right: 1rem;
 }
 
 .text-size span {
@@ -43,6 +44,14 @@
   .text-size button {
     padding: 0.2rem 0.6rem;
     font-size: 0.9rem;
+    border-radius: 0.4rem;
+  }
+
+  #small-button {
+    font-size: 0.9rem;
+  }
+  #large-button {
+    font-size: 1.1rem;
   }
 
   .size-14 {
@@ -55,6 +64,11 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+
+  .text-size {
+    padding-right: 1.3rem;
+  }
+
   .text-size span {
     font-size: 1rem;
   }
@@ -62,6 +76,14 @@
   .text-size button {
     padding: 0.3rem 0.8rem;
     font-size: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  #small-button {
+    font-size: 1rem;
+  }
+  #large-button {
+    font-size: 1.2rem;
   }
 
   .size-14 {
@@ -78,9 +100,21 @@
     font-size: 1.2rem;
   }
 
+  .text-size {
+    padding-right: 1.5rem;
+  }
+
   .text-size button {
-    padding: 0.4rem 1rem;
+    padding: 0.4rem 0.9rem;
     font-size: 1.2rem;
+    border-radius: 0.5rem;
+  }
+
+  #small-button {
+    font-size: 1.2rem;
+  }
+  #large-button {
+    font-size: 1.4rem;
   }
 
   .size-14 {
